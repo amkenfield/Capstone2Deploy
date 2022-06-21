@@ -7,6 +7,8 @@ import axios from "axios";
 
 const BASE_URL = "";
 
+// add check if local/development; if so, has to run on local host
+
 
 /** API Class.
  *
@@ -22,7 +24,7 @@ class EpicViewerApi {
   static async request(endpoint, data = {}, method = "get") {
     console.debug("API Call:", endpoint, data, method);
 
-    const url = `${BASE_URL}/${endpoint}`;
+    const url = `${BASE_URL}/api/${endpoint}`;
   
     const headers = {Authorization: `Bearer ${EpicViewerApi.token}`};
     const params = (method === "get") ? data : {};
