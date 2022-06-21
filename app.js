@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(morgan('tiny'));
 app.use(authenticateJWT);
 
+// not sure where this should go (if even works...)
 app.use(express.static(path.resolve(__dirname, "./frontend/epic-viewer/build")));
 
 app.use("/auth", authRoutes);
@@ -46,7 +47,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// not sure where this should go (if even works...)
+
 
 
 module.exports = app;

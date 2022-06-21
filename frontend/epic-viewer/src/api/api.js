@@ -1,7 +1,10 @@
 import axios from "axios";
 
 // does this carry over from Jobly, or do I need to rename process.env.**** ?
-const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+// const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+
+const BASE_URL = "epic-viewer-capstone.herokuapp.com";
+
 
 /** API Class.
  *
@@ -18,6 +21,7 @@ class EpicViewerApi {
     console.debug("API Call:", endpoint, data, method);
 
     const url = `${BASE_URL}/${endpoint}`;
+  
     const headers = {Authorization: `Bearer ${EpicViewerApi.token}`};
     const params = (method === "get") ? data : {};
 
