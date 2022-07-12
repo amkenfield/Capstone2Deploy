@@ -25,6 +25,8 @@ class EpicViewerApi {
     console.debug("API Call:", endpoint, data, method);
 
     const url = `${BASE_URL}/api/${endpoint}`;
+
+    console.debug("New URL:", url);
   
     const headers = {Authorization: `Bearer ${EpicViewerApi.token}`};
     const params = (method === "get") ? data : {};
