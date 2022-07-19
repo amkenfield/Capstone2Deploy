@@ -26,11 +26,11 @@ app.use(authenticateJWT);
 // not sure where this should go (if even works...)
 app.use(express.static(path.resolve(__dirname, "./frontend/epic-viewer/build")));
 
-app.use("api/auth", authRoutes);
-app.use("api/users", usersRoutes);
-app.use("api/lines", linesRoutes);
-app.use("api/authors", authorsRoutes);
-app.use("api/works", worksRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/users", usersRoutes);
+app.use("/api/lines", linesRoutes);
+app.use("/api/authors", authorsRoutes);
+app.use("/api/works", worksRoutes);
 
 
 app.use(function(req, res, next) {
