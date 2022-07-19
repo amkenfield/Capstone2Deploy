@@ -24,7 +24,8 @@ class EpicViewerApi {
   static async request(endpoint, data = {}, method = "get") {
     console.debug("API Call:", endpoint, data, method);
 
-    const url = `${BASE_URL}/api/${endpoint}`;
+    // const url = `${BASE_URL}/api/${endpoint}`;
+    const url = `$/api/${endpoint}`;
 
     console.debug("New URL:", url);
   
