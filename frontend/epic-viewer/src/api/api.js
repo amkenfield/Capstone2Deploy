@@ -1,11 +1,11 @@
 import axios from "axios";
 
 // does this carry over from Jobly, or do I need to rename process.env.**** ?
-// const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 
 // const BASE_URL = "epic-viewer-capstone.herokuapp.com";
 
-const BASE_URL = "";
+// const BASE_URL = "";
 
 // add check if local/development; if so, has to run on local host
 
